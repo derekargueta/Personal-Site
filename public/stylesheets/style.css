@@ -1,0 +1,301 @@
+a{
+	cursor: pointer;
+}
+
+#name{
+	color:#504A4B;
+}
+
+.nav-pills{
+	margin-top:auto;
+	margin-bottom:auto;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.nav{
+	font-size:1.7em;
+}
+
+body{
+	padding-top:25px;
+	padding-left:30px;
+	padding-right:15px;
+	background-color:#1C1C1C;
+}
+
+.titleStyle1, .titleStyle2{
+	font-size:90px;
+	line-height: 100%;
+}
+
+.titleStyle1{
+	color:#428bca;
+}
+
+.titleStyle2{
+	color: #FFFFFF;
+}
+
+.font26{
+	font-size: 26px;
+}
+
+.font23{
+	font-size: 23px;
+}
+
+.font20{
+	font-size: 20px;
+}
+
+.font16{
+	font-size: 16px;
+}
+
+.greyBar, .fullWidth{
+	width: 100%;
+}
+
+.projectIcon{
+	width: 128px;
+	height: 128px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: 25px;
+}
+
+#groupSmartIcon{
+	background-image: url(../GroupSmart/images/bigIcon.png);
+}
+
+#appleIcon{
+	background-image: url(../GroupSmart/images/apple.png);
+}
+
+#androidIcon{
+	background-image: url(../GroupSmart/images/android.gif);
+}
+
+#javaIcon{
+	background-image: url(../images/java.png);
+}
+
+#pythonIcon{
+	background-image: url(../images/python.png);
+}
+
+#luaIcon{
+	background-image: url(../images/lua.png);
+}
+
+#htmlIcon{
+	background-image: url(../images/html.png);
+}
+
+#rpiIcon{
+	background-image: url(../images/rpi.png);
+}
+
+.mediaIcon{
+	margin: 20px;
+	display: inline-block;
+}
+
+.mediaIcon > img{
+	width: 128px;
+	height: 128px;
+}
+
+#mainNav{
+	width: 1000px;
+	margin-top: 15px;
+}
+
+#innerProjects > div{
+	width: 600px;
+	margin-left: 75px;
+}
+
+#projectEuler > div{
+	width: 800px;
+	height: 400px;
+}
+
+#contact > div{
+	width: 950px;
+}
+
+#contact > div > div{
+	width: 690px;
+}
+
+#work > div{
+	width: 1000px;
+	height: 975px;
+	background-color: #E6E6E6;
+	margin-bottom: 50px;
+}
+
+#past > div{
+	width: 600px;
+	margin-left: 75px;
+}
+
+#currentOngoing > div{
+	width: 600px;
+	margin-left: 75px;
+}
+
+.tallLines{
+	line-height: 125%;
+}
+
+#funLinksContent{
+	width: 600px;
+	margin-left: 75px;
+}
+
+#subtitle{
+	height: 50px;
+}
+
+#mainContent{
+	width: 1000px;
+	height: 800px;
+	background-color: #E6E6E6;
+	padding-top: 15px;
+	margin-bottom: 50px;
+}
+
+#iconColumn{
+	margin-top: 50px;
+	width: 300px;
+	margin-right: 25px;
+}
+
+#projectNav{
+	width: 300px;
+	margin-right: 25px;
+	margin-top: 15px;
+	list-style-type: none;
+}
+
+/** Styling for the tab-panes **/
+#projects{
+	width: 1000px;
+	height: 1775px;
+	background-color: #E6E6E6;
+	margin-bottom: 50px;
+}
+
+#skills{
+	width: 1000px;
+	height: 1145px;
+	background-color: #E6E6E6;
+	margin-bottom: 50px;
+}
+
+#home, #skillsDiv, #github{
+	width: 800px;
+}
+
+#currentOngoing{
+	height: 1000px;
+}
+
+#workTable{
+	width: 850px;
+}
+
+#center{
+	float: left;
+	width: 80%;
+}
+
+.greyBar{
+	height: 2px;
+	margin: 0px;
+}
+
+.projectTitle{
+	margin: 0px;
+	font-size: 27px;
+}
+
+h4{
+	text-align: center;
+	color: #504A4B;
+}
+
+p{
+	color: #504A4B;
+}
+
+.ext_link{
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.ext_link:hover{
+	color:red;
+	text-decoration:underline;
+}
+
+#column{
+	width:17%;
+	height:515px;
+	background-color:white;
+	border-style:solid;
+	border-color:#504A4B;
+	border-width:5px;
+	float:right;
+}
+
+#eulerImage{
+	height: 90px;
+	width: 300px;
+}
+
+th{
+	padding-bottom: 0px;
+}
+
+#about{
+	height: 3650px;
+	background-color: #E6E6E6;
+	margin-bottom: 50px;
+}
+
+.aboutBlock{
+	width:550px;
+}
+
+#quotes{
+	width: 600px;
+	height: 600px;
+	margin-top: 30px;
+}
+
+#about1{
+	margin-left: 100px;
+}
+
+#about2{
+	width: 100%;
+	height: 400px;
+	margin-top: 50px;
+	clear: both;
+}
+
+#about3{
+	width: 100%;
+	height: 200px;
+	clear: both;
+}
+
+#about4{
+	width: 100%;
+	height: 500px;
+	clear: both;
+}
