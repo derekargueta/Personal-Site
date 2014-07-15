@@ -68,15 +68,15 @@ body {
 }
 
 #groupSmartIcon {
-  background-image: url(../GroupSmart/images/bigIcon.png);
+  background-image: url(../images/groupsmart.png);
 }
 
 #appleIcon {
-  background-image: url(../GroupSmart/images/apple.png);
+  background-image: url(../images/Apple_logo.png);
 }
 
 #androidIcon {
-  background-image: url(../GroupSmart/images/android.gif);
+  background-image: url(../images/Android_logo.png);
 }
 
 #javaIcon {
@@ -193,9 +193,13 @@ body {
 
 #skills {
   width: 1000px;
-  height: 1145px;
+  height: 745px;
   background-color: #E6E6E6;
   margin-bottom: 50px;
+}
+
+#home {
+  height: 750px;
 }
 
 #home,

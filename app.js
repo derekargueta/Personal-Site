@@ -61,6 +61,4 @@ app.use(function(err, req, res, next) {
     });
 });
 
-app.listen(24017);
-
 module.exports = app;
