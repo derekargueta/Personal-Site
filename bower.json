@@ -1,0 +1,21 @@
+{
+  "name": "Personal-Site",
+  "version": "0.3.0",
+  "homepage": "https://github.com/derekargueta/Personal-Site",
+  "authors": [
+    "derekargueta <darguetap@gmail.com>"
+  ],
+  "description": "Personal Website",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "~4.1.0",
+    "bootstrap": "~3.2.0"
+  }
+}
