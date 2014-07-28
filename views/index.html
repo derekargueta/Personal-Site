@@ -6,8 +6,8 @@
 	<link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="components/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="components/octicons/octicons/octicons.css">
 	<script src="components/jquery/dist/jquery.min.js"></script>
-	<script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -374,11 +374,25 @@
 		</div>
 
 		<!-- GitHub pane -->
-		<div class="tab-pane center-block" id="github">
+		<div class="tab-pane center-block" id="github" style="width:100%;height:1100px;background-color:#E6E6E6">
 		  <h2 class="text-center">
 		    <a href="http://www.github.com/derekargueta" target="_blank">Feel free to explore my Github</a>
 		  </h2>
-		  <p class="font26">It is quite up-to-date. I usually make commits at least every 3 or 4 days. It contains all of my personal projects and most of my classwork.</p>
+		  <p class="font26 center-block" style="width:800px">It is quite up-to-date. I usually make commits at least every 3 or 4 days. It contains all of my personal projects and most of my classwork.</p>
+		  <ul id="github_feed" class="block-center" style="width:700px;margin-left:auto;margin-right:auto;margin-top:50px;list-style-type:none;background-color:#1C1C1C;border-radius:15px;padding:20px;border:10px solid white">
+
+		    <% for(var x = 0; x < 15; x++) { %>
+		    	<li id='git<%=x%>'>
+		    	
+		    	</li>
+		    	<script>
+		    	  var decoded = $("#git<%=x%>").html('<%= feed[x] %>').text();
+		    	  $("#git<%=x%>").html(decoded);
+		    	  console.log(decoded);
+		    	</script>
+		    <% } %>
+
+		  </ul>
 		</div>
 
 		<!-- Work Pane -->
@@ -552,7 +566,19 @@
     <p style="text-align:center">Running on Node.js with Express</p>
   </div>	
   </div>
+  
+  <script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!--
+	<script>
+	  var feed = '<%= feed %>';
+	  for(var x = 0; x < feed.length; x++) {
+	  	console.log(feed[x]);
+	  	$("#github_feed").append("<li>" + feed[x] + "</li>");
+	  }
+	</script>
+	-->
   <script type="text/javascript">
+
 	  function openInNewTab(url){
 	    window.open('http://www.' + String(url), '_blank').focus();
 	  }
