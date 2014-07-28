@@ -30,11 +30,6 @@ feedparser.on('readable', function() {
     , item;
 
   while (item = stream.read()) {
-  	console.log("title: " + item.title);
-  	console.log("description: " + item.description);
-  	console.log("link: " + item.link);
-  	console.log("pubdate: " + item.pubdate);
-  	console.log('===========================================================================')
   	var dateList = String(item.pubdate).split(" ");
   	var date = dateList[0] + " " + dateList[1] + " " + dateList[2] + " " + dateList[3];
   	var itemTitle = String(item.title);
