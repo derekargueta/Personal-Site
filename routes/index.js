@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var dateParser = require('./DateParser');
+var htmlBuilder = require('./githubRssHtmlBuilder');
 var constants = require('../constants');
 
 var feedResult = new Array();
@@ -34,31 +34,8 @@ feedparser.on('readable', function() {
     , item;
 
   while (item = stream.read()) {
-  	var date = dateParser.parseDate(item.pubdate);
-  	var itemTitle = String(item.title);
-
-  	var spanStart = '<span class="octicon ';
-  	if(itemTitle.toLowerCase().indexOf("starred") > -1) {
-  		spanStart += 'octicon-star" ';
-  	} else if(itemTitle.toLowerCase().indexOf("pushed") > -1) {
-  		spanStart += 'octicon-git-commit" ';
-  	} else if(itemTitle.toLowerCase().indexOf("created") > -1) {
-      if(itemTitle.toLowerCase().indexOf("repository") > -1) {
-        spanStart += 'octicon-repo" ';
-      } else if(itemTitle.toLowerCase().indexOf("branch") > -1) {
-        spanStart += 'octicon-git-branch" ';
-      }
-    } else {
-  		spanStart += '" ';
-  	}
-  	spanStart+= 'style="font-size:22px">';
-  	var linkStart = '<a href="' + String(item.link) + '" target="_blank">     ';
-  	var feedTitle = '<b>' + itemTitle + '</b>';
-  	var pubDate =  '<p><b>' + date + '</b></p>';
-
-  	var total = spanStart + linkStart + feedTitle + '</a></span>' + pubDate; 
-
-    feedResult.push(total);
+  	 
+    feedResult.push(htmlBuilder.buildRssHtml(item));
   }
 
 });
