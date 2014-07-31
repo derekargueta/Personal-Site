@@ -24,6 +24,11 @@ body {
   background-color: #1C1C1C;
 }
 
+body > p {
+  font-size: 90px;
+  line-height: 100%;
+}
+
 .titleStyle1,
 .titleStyle2 {
   font-size: 90px;
@@ -144,6 +149,10 @@ body {
   margin-left: 75px;
 }
 
+#past > div > .center-block {
+  width: 200px;
+}
+
 #currentOngoing > div {
   width: 600px;
   margin-left: 75px;
@@ -189,6 +198,10 @@ body {
   height: 1775px;
   background-color: #E6E6E6;
   margin-bottom: 50px;
+}
+
+#projects > .pull-right {
+  width: 300px;
 }
 
 #skills {
@@ -301,6 +314,12 @@ th {
   clear: both;
 }
 
+#about2 > img {
+  width: 160px;
+  height: 350px;
+  margin-left: 100px;
+}
+
 #about3 {
   width: 100%;
   height: 200px;
@@ -311,4 +330,27 @@ th {
   width: 100%;
   height: 500px;
   clear: both;
+}
+
+#about4 > img {
+  margin-right: 100px;
+  width: 200px;
+  height: 275px;
+  margin-top: 50px;
+}
+
+#github {
+  width: 100%;
+  height: 1100px;
+  background-color: #E6E6E6;
+}
+
+#github_feed {
+  width: 800px;
+  margin-top: 50px;
+  list-style-type: none;
+  background-color: #1C1C1C;
+  border-radius: 15px;
+  padding: 20px;
+  border: 10px solid white;
 }

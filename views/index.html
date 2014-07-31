@@ -12,7 +12,7 @@
 
   <body>
 	
-	<p class="text-center" style="font-size:90px;line-height: 100%">
+	<p class="text-center">
 	  <span class="titleStyle1">Derek</span>
 	  <span class="titleStyle2">Argueta</span>
 	  <span class="titleStyle1">BYU</span>
@@ -46,7 +46,7 @@
 		  </div>
 
 		  <div id="about2">
-			<img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/t1.0-9/1620544_10202933559925719_726952605_n.jpg" style="width:160px;height:350px;margin-left:100px"/>
+			<img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/t1.0-9/1620544_10202933559925719_726952605_n.jpg"/>
 
 			<div style="margin-right:100px;margin-top:50px" class="pull-right aboutBlock">
 			  <h2>I am a musician.</h2>
@@ -55,7 +55,7 @@
 		  </div>
 
 		  <div id="about4">
-			<img src="images/profile_pic.jpg" class="pull-right" style="margin-right:100px;width:200px;height:275px;margin-top:50px"/>
+			<img src="images/profile_pic.jpg" class="pull-right"/>
 
 			<div style="margin-left:100px" class="pull-left aboutBlock">
 		  	  <h2>And I am a math geek.</h2>
@@ -118,7 +118,7 @@
 		
 		<!-- Projects tab page -->
 		<div class="tab-pane" id="projects">
-		  <div style="width:300px;" class="pull-right">
+		  <div class="pull-right">
 			<ul class="nav nav-tabs pull-right" id="projectNav">
 			  <li class="active fullWidth">
 				<a href="#innerProjects" data-toggle="tab">
@@ -198,7 +198,7 @@
 			  <div class="center-block pull-left">
 
 			    <br/><br/>
-			    <div class="center-block" style="width:200px">
+			    <div class="center-block">
 				  <p class="text-center projectTitle">
 				    <b><a href="" onclick="window.openHere('github.com/derekargueta/Jeopardy', '_blank').focus();">Jeopardy</a></b>
 				  </p>
@@ -220,7 +220,7 @@
 
 			    <br/><br/>
 
-			    <div class="center-block" style="width:200px">
+			    <div class="center-block">
 				  <p class="text-center projectTitle">
 				    <b><a href="" onclick="window.openHere('github.com/derekargueta/DiscoWindows', '_blank').focus();">DiscoWindows</a></b>
 				  </p>
@@ -374,12 +374,12 @@
 		</div>
 
 		<!-- GitHub pane -->
-		<div class="tab-pane center-block" id="github" style="width:100%;height:1100px;background-color:#E6E6E6">
+		<div class="tab-pane center-block" id="github">
 		  <h2 class="text-center">
 		    <a href="http://www.github.com/derekargueta" target="_blank">Feel free to explore my Github</a>
 		  </h2>
 		  <p class="font26 center-block" style="width:800px">It is quite up-to-date. I usually make commits at least every 3 or 4 days. It contains all of my personal projects and most of my classwork.</p>
-		  <ul id="github_feed" class="block-center" style="width:800px;margin-left:auto;margin-right:auto;margin-top:50px;list-style-type:none;background-color:#1C1C1C;border-radius:15px;padding:20px;border:10px solid white">
+		  <ul id="github_feed" class="center-block">
 
 		    <% for(var x = 0; x < 15; x++) { %>
 		    	<li id='git<%=x%>'>

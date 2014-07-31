@@ -8,7 +8,7 @@ module.exports = {
 	  	spanStart += getGithubClass(item.title);
 	  	spanStart += 'style="font-size:22px">';
 	  	var linkStart = '<a href="' + String(item.link) + '" target="_blank">     ';
-	  	var feedTitle = '<b>' + itemTitle + '</b>';
+	  	var feedTitle = '<b>' + String(item.title) + '</b>';
 	  	var pubDate =  '<p><b>' + date + '</b></p>';
 
 	  	var total = spanStart + linkStart + feedTitle + '</a></span>' + pubDate;
