@@ -1,11 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var dateParser = require('./DateParser');
+var constants = require('../constants');
 
 var feedResult = new Array();
 var FeedParser = require('feedparser')
   , request = require('request');
 
-var req = request('https://github.com/derekargueta.atom')
+var req = request(constants.github_rss_url)
   , feedparser = new FeedParser();
 
 req.on('error', function (error) {
@@ -14,7 +16,9 @@ req.on('error', function (error) {
 req.on('response', function (res) {
   var stream = this;
 
-  if (res.statusCode != 200) return this.emit('error', new Error('Bad status code'));
+  if (res.statusCode != 200) {
+    return this.emit('error', new Error('Bad status code'));
+  }
 
   stream.pipe(feedparser);
 });
@@ -30,16 +34,21 @@ feedparser.on('readable', function() {
     , item;
 
   while (item = stream.read()) {
-  	var dateList = String(item.pubdate).split(" ");
-  	var date = dateList[0] + " " + dateList[1] + " " + dateList[2] + " " + dateList[3];
+  	var date = dateParser.parseDate(item.pubdate);
   	var itemTitle = String(item.title);
 
   	var spanStart = '<span class="octicon ';
-  	if(itemTitle.indexOf("starred") > -1) {
+  	if(itemTitle.toLowerCase().indexOf("starred") > -1) {
   		spanStart += 'octicon-star" ';
-  	} else if(itemTitle.indexOf("pushed") > -1) {
+  	} else if(itemTitle.toLowerCase().indexOf("pushed") > -1) {
   		spanStart += 'octicon-git-commit" ';
-  	} else {
+  	} else if(itemTitle.toLowerCase().indexOf("created") > -1) {
+      if(itemTitle.toLowerCase().indexOf("repository") > -1) {
+        spanStart += 'octicon-repo" ';
+      } else if(itemTitle.toLowerCase().indexOf("branch") > -1) {
+        spanStart += 'octicon-git-branch" ';
+      }
+    } else {
   		spanStart += '" ';
   	}
   	spanStart+= 'style="font-size:22px">';
