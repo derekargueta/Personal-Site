@@ -3,23 +3,61 @@
   <head>
 	<title>Derek Argueta</title>
 
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="components/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="components/octicons/octicons/octicons.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/jquery.min.js"></script>
-	<script src="bootstrap/js/bootstrap.js"></script>
+	<script src="components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnzEbUYUuB4MMWfniPm_aY2k7vAou_tnw"></script>
+    <script>
+      function initialize() {
+      	var mapOptions = {
+      	  center: new google.maps.LatLng(36.4971621, -104.01605489999999),
+      	  zoom: 5,
+      	  streetViewControl: false,
+      	  mapTypeControl: false
+      	};
+      	var map = new google.maps.Map(document.getElementById("map-canvas"),
+      				mapOptions);
+
+      	var houstonWindow = new google.maps.InfoWindow({
+      	  content: "My home, Houston, TX"
+      	});
+
+      	var houstonMarker = new google.maps.Marker({
+		  position: new google.maps.LatLng(30.0971621, -95.61605489999999),
+		  map: map
+		});
+
+		var infowindow = new google.maps.InfoWindow({
+		  content: "My current residence, Provo, UT"
+		});
+
+		var provoMarker = new google.maps.Marker({
+		  position: new google.maps.LatLng(40.2338438, -111.6585337),
+		  map: map
+		});
+
+		infowindow.open(map, provoMarker);
+		houstonWindow.open(map, houstonMarker);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   </head>
 
   <body>
 	
-	<p class="text-center" style="font-size:90px;line-height: 100%">
+	<p class="text-center">
 	  <span class="titleStyle1">Derek</span>
 	  <span class="titleStyle2">Argueta</span>
 	  <span class="titleStyle1">BYU</span>
 	  <span class="titleStyle2">CS</span>
 	</p>
 	<div class="text-center center-block fullWidth" id="subtitle">
-	  <p class="font26">Computer Science and Mathematics double major at Brigham Young University</p>
+	  <p class="font26">
+	    Computer Science and Mathematics double major at Brigham Young University
+	  </p>
 	</div>
 
 	<!-- Main Navigation Bar -->
@@ -38,71 +76,89 @@
 	<div class="center-block" id="mainContent">
 	  <div class="tab-content">
 		<div class="tab-pane center-block" id="about">
-		  <img src="images/derek.jpg" style="width:200px;height:200px;margin-right:100px;margin-top:25px" class="pull-right"/>
+		  <img src="images/derek.jpg" class="pull-right"/>
 		  <div id="about1" class="aboutBlock">
 			<h3>Programmer. Hacker. Geek.</h3>
-			<p class="font16">I was born in Houston, Texas (the greatest state ever), but I am currently a student residing in Provo, UT studying computer science and mathematics at Brigham Young University. I spend a lot my time coding and practicing math (obviously), but I also enjoy a variety of other activities as well including playing the double bass, playing tennis, hiking, biking, hanging out with my roommates, playing Starcraft II and Minecraft, or just reading about whatever interesting topics Wikipedia and Reddit serve up. I am also a whiteboard fanatic.</p>
+			<p class="font16">
+			  I was born in Houston, Texas (the greatest state ever), but I am currently a student residing in Provo, UT studying computer science and mathematics at Brigham Young University. I spend a lot my time coding and practicing math (obviously), but I also enjoy a variety of other activities as well including playing the double bass, playing tennis, hiking, biking, hanging out with my roommates, playing Starcraft II and Minecraft, or just reading about whatever interesting topics Wikipedia and Reddit serve up. I am also a whiteboard fanatic.
+			</p>
 		  </div>
+
 		  <div id="about2">
-			<img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/t1.0-9/1620544_10202933559925719_726952605_n.jpg" style="width:160px;height:350px;margin-left:100px"/>
+			<img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash3/t1.0-9/1620544_10202933559925719_726952605_n.jpg"/>
 
-			<div style="margin-right:100px;margin-top:50px" class="pull-right aboutBlock">
-			  <h2>I am a musician</h2>
-			  <p class="font16">I have played the double bass since I was in 5th grade, and started piano even before that. However around middle school or high school I decided to study only the bass for my musical pastime. I have had the opportunity to play many great works with my high school orchestras and university symphony orchestra including St. Paul's Suite by Gustav Holst, the Prince Igor Overture by Alexander Borodin, Concierto for Guitar and Orchestra by Rodrigo Aranjuez, the Impressario Overture by Wolfgang Mozart, Finlandia by Jean Sibilius, Carmina Burana by Karl Orff, and many other fantastic pieces of musical literature. Today I simply enjoy practicing the double bass as a form of relaxation.</p>
-			</div>
-		  </div>
-					
-	  	  <div id="about3">
-			<img src="images/derek3.jpg" style="width:200px;height200px;margin-right:100px" class="pull-right"/>
-
-			<div class="aboutBlock pull-left" style="margin-left:100px">
-			  <h2>I am an Artist</h2>
-			  <p class="font16">While I have never been good with a paint brush or colored pencils, I do believe in "beautiful code". There is just something magical about opening a .java, .m, .cpp, or .js file after a while of not working on it and having it so well commented, organized, and written that you could read it like a book. That is why I would personally go out of my way, spending however much time necessary, to get my code well-formatted and well-commented so that it is easy to understand and "beautiful".</p>
+			<div class="pull-right aboutBlock">
+			  <h2>I am a musician.</h2>
+			  <p class="font16">
+			    I have played the double bass since I was in 5th grade, and started piano even before that. However around middle school or high school I decided to study only the bass for my musical pastime. I have had the opportunity to play many great works with my high school orchestras and university symphony orchestra including St. Paul's Suite by Gustav Holst, the Prince Igor Overture by Alexander Borodin, Concierto for Guitar and Orchestra by Rodrigo Aranjuez, the Impressario Overture by Wolfgang Mozart, Finlandia by Jean Sibilius, Carmina Burana by Karl Orff, and many other fantastic pieces of musical literature. Today I simply enjoy practicing the double bass as a form of relaxation.
+			  </p>
 			</div>
 		  </div>
 
 		  <div id="about4">
-			<img src="images/profile_pic.jpg" class="pull-left" style="margin-left:100px;width:200px;height:275px;margin-top:50px"/>
+			<img src="images/profile_pic.jpg" class="pull-right"/>
 
-			<div style="margin-right:100px" class="pull-right aboutBlock">
-		  	  <h2>I am a math geek.</h2>
-			  <p class="font16">I find math to be spectactular. Everything in this world, literally everything, can be translated into a mathematical statement. "Mathematics is the language with which God wrote the Universe." as Galileo Galilei once said. I feel that the barrier that most people run into is believing that math is a big collection of numbers and just doing tons of number crunching, but that couldn't be farther from the truth. Math is much more than algebra, geometry, and calculus. Mathematics is how Google Maps can find the directions from point A, from anywhere in the world, to point B using a branch of mathematics called Graph Theory. Cryptography is the mathematical study of encryptions and secret communication. Interactions between players in a board game or video game is studied through a mathematical branch called Game Theory. Without math, we wouldn't have any of the phenomenal advances in technology and living that we currently enjoy. We wouldn't have the physics necessary to create planes and cars or fly to the moon. We wouldn't have the computers that do so much for us. Even in "natural" non-technological items we can find math. The harmonics on stringed instruments is simply a series of fractal lengths on the string that produce natural frequencies. A fibonacci spiral can be observed in many common flowers. Math is beautiful, complex, and essential.</p>
+			<div class="pull-left aboutBlock">
+		  	  <h2>And I am a math geek.</h2>
+			  <p class="font16">
+			    I find math to be spectactular. Everything in this world, literally everything, can be translated into a mathematical statement. "Mathematics is the language with which God wrote the Universe." as Galileo Galilei once said. I feel that the barrier that most people run into is believing that math is a big collection of numbers and just doing tons of number crunching, but that couldn't be farther from the truth. Math is much more than algebra, geometry, and calculus. Mathematics is how Google Maps can find the directions from point A, from anywhere in the world, to point B using a branch of mathematics called Graph Theory. Cryptography is the mathematical study of encryptions and secret communication. Interactions between players in a board game or video game is studied through a mathematical branch called Game Theory. Without math, we wouldn't have any of the phenomenal advances in technology and living that we currently enjoy. We wouldn't have the physics necessary to create planes and cars or fly to the moon. We wouldn't have the computers that do so much for us. Even in "natural" non-technological items we can find math. The harmonics on stringed instruments is simply a series of fractal lengths on the string that produce natural frequencies. A fibonacci spiral can be observed in many common flowers. Math is beautiful, complex, and essential.
+			  </p>
 			</div>
 		  </div>
 
 		  <div id="quotes" class="center-block">
 			<h2 class="center-text">Favorite Quotes</h2>
-			<p class="font26">"I have free will, but not of my own choice. I have never freely chosen to have free will. I have to have free will, whether I like it or not!"</p>
+			<p class="font26">
+			  "I have free will, but not of my own choice. I have never freely chosen to have free will. I have to have free will, whether I like it or not!"
+			</p>
 			<p class="font20">Raymond Smullyman</p>
 			<br/>
-			<p class="font26">"Intellectual property has the shelf life of a banana."</p>
+			<p class="font26">
+			  "Intellectual property has the shelf life of a banana."
+			</p>
 			<p class="font20">Bill Gates</p>
 			<br/>
-			<p class="font26">"I believe that if you show people the problems and you show them the solutions they will be moved to act."</p>
+			<p class="font26">
+			  "I believe that if you show people the problems and you show them the solutions they will be moved to act."
+			</p>
 			<p class="font20">Bill Gates</p>
 			<br/>
-			<p class="font26">"You've got to be willing to read other people's code, and then write your own, then have other people review your code. You've got to want to be in this incredible feedback loop where you get the world-class people to tell you what you're doing wrong..."</p>
+			<p class="font26">
+			  "You've got to be willing to read other people's code, and then write your own, then have other people review your code. You've got to want to be in this incredible feedback loop where you get the world-class people to tell you what you're doing wrong..."
+			</p>
 			<p class="font20">Bill Gates</p>
 			<br/>
-			<p class="font26">"How do we convince people that in programming simplicity and clarity - in short: what mathematicians call "elegance" - are not a dispensable luxury, but a crucial matter that decides between success and failure?"</p>
+			<p class="font26">
+			  "How do we convince people that in programming simplicity and clarity - in short: what mathematicians call "elegance" - are not a dispensable luxury, but a crucial matter that decides between success and failure?"
+			</p>
 			<p class="font20">Edgar W. Dijkstra</p>
 			<br/>
-			<p class="font26">"Programming is one of the most difficult branches of applied mathematics; the poorer mathematicians had better remain pure mathematicians."</p>
+			<p class="font26">
+			  "Programming is one of the most difficult branches of applied mathematics; the poorer mathematicians had better remain pure mathematicians."
+			</p>
 			<p class="font20">Edgar W. Dijkstra</p>
 			<br/>
-			<p class="font26">"If you love what you do and are willing to do what it takes, it's within your reach. And it'll be worth every minute you spend alone at night, thinking and thinking about what it is you want to design or build. It'll be worth it, I promise."</p>
+			<p class="font26">
+			  "If you love what you do and are willing to do what it takes, it's within your reach. And it'll be worth every minute you spend alone at night, thinking and thinking about what it is you want to design or build. It'll be worth it, I promise."
+			</p>
 			<p class="font20">Steve Wozniak</p>
 			<br/>
-			<p class="font26">"Some of you enjoy just coding. You'll clock in and clock out, doing boring everyday coding. But some of you want to really solve problems in the world, doing more than just deciding where to put a button, and for that you need the math."</p>
+			<p class="font26">
+			  "Some of you enjoy just coding. You'll clock in and clock out, doing boring everyday coding. But some of you want to really solve problems in the world, doing more than just deciding where to put a button, and for that you need the math."
+			</p>
 			<p class="font20">Eric G. Mercer</p>
 			<br/>
 			<p class="font26">We build too many walls and not enough bridges.</p>
 			<p class="font20">Sir Isaac Newton</p>
 			<br/>
-			<p class="font26">"Curious that we spend more time congratulating people who have succeeded than encouraging people who have not."</p>
+			<p class="font26">
+			  "Curious that we spend more time congratulating people who have succeeded than encouraging people who have not."
+			</p>
 			<p class="font20">Neil deGrasse Tyson</p>
 			<br/>
-			<p class="font26">"Math is the language of the universe. So the more equations you know, the more you can converse with the cosmos."</p>
+			<p class="font26">
+			  "Math is the language of the universe. So the more equations you know, the more you can converse with the cosmos."
+			</p>
 			<p class="font20">Neil deGrasse Tyson</p>
 			<br/>
 			<br/>
@@ -114,15 +170,19 @@
 		<!-- The Home page for the whole site -->
 		<div class="tab-pane active center-block" id="home">
 		  <h2 class="tallLines">Welcome to my site. I am an amateur software engineer and mathematician located in Provo, UT completing (really starting) my education at Brigham Young University. My recent ventures have taken me to iOS development, developing web apps, web design, and applied discrete mathematics with set theory and graph theory.</h2>
+		  <div id="map-canvas" class="center-block" style="width:800px;height:450px;margin-top:30px"></div>
 		</div>
+
+		<!-- Blog tab page -->
 		<div class="tab-pane" id="blog">
 		  <br/>
 		  <br/>
 		  <h2 class="text-center">No Blog Posts.</h2>
 		</div>
 		
+		<!-- Projects tab page -->
 		<div class="tab-pane" id="projects">
-		  <div style="width:300px;" class="pull-right">
+		  <div class="pull-right">
 			<ul class="nav nav-tabs pull-right" id="projectNav">
 			  <li class="active fullWidth">
 				<a href="#innerProjects" data-toggle="tab">
@@ -160,49 +220,93 @@
 		  <div class="tab-content">
 			<div class="tab-pane" id="funLinks">
 			  <div class="pull-left" id="funLinksContent">
-				<a onclick="openInNewTab('codingbat.com');"><h3>Coding Bat</h3></a>
-				<p>Lots of practice questions with Java and Python. Great for developing problem-solving skills.</p>
-				<a onclick="openInNewTab('projecteuler.net');"><h3>Project Euler</h3></a>
-				<p>Hundreds of complex mathematical problems that require epic algorithm skills to solve</p>
-				<a onclick="openInNewTab('colourlovers.com/');"><h3>Colour Lovers</h3></a>
+				<a onclick="openInNewTab('codingbat.com');">
+				  <h3>Coding Bat</h3>
+				</a>
+				<p>
+				  Lots of practice questions with Java and Python. Great for developing problem-solving skills.
+				</p>
+				<a onclick="openInNewTab('projecteuler.net');">
+				  <h3>Project Euler</h3>
+				</a>
+				<p>
+				  Hundreds of complex mathematical problems that require epic algorithm skills to solve
+				</p>
+				<a onclick="openInNewTab('colourlovers.com/');">
+				  <h3>Colour Lovers</h3>
+				</a>
 				<p>Great for finding color schemes and matching colors.</p>
-				<a onclick="openInNewTab('w3schools.com');"><h3>W3 Schools</h3></a>
-				<p>Great resource for learning web-based technologies such as HTML, CSS, JavaScript, PHP, .ASP and more.</p>
-				<a onclick="openInNewTab('cplusplus.com');"><h3>CPlusPlus.com</h3></a>
+				<a onclick="openInNewTab('w3schools.com');">
+				  <h3>W3 Schools</h3>
+				</a>
+				<p>
+				  Great resource for learning web-based technologies such as HTML, CSS, JavaScript, PHP, .ASP and more.
+				</p>
+				<a onclick="openInNewTab('cplusplus.com');">
+				  <h3>CPlusPlus.com</h3>
+				</a>
 				<p>Great C++ reference.</p>
-				<a onclick="openInNewTab('stackoverflow.com');"><h3>Stack Overflow</h3></a>
+				<a onclick="openInNewTab('stackoverflow.com');">
+				  <h3>Stack Overflow</h3>
+				</a>
 				<p>Awesome forum where you can post questions for other programmers to answer</p>
-				<a onclick="openInNewTab('vandelaydesign.com/blog/social-media/icons/');"><h3>Social Media Icons</h3></a>
+				<a onclick="openInNewTab('vandelaydesign.com/blog/social-media/icons/');">
+				  <h3>Social Media Icons</h3>
+				</a>
 				<p>40 sheets of free social media icons.</p>
-				<a onclick="openInNewTab('vogella.com/');"><h3>Vogella</h3></a>
+				<a onclick="openInNewTab('vogella.com/');">
+				  <h3>Vogella</h3>
+				</a>
 				<p>This guy has awesome tutorials and help in Java for several different topics</p>
-				<a onclick="openInNewTab('sorting-algorithms.com/');"><h3>Sorting Algorithms</h3></a>
-				<p>A great site that gives pseudocode, performance analysis, and animations on 8 different sorting algorithms.</p>
-				<a onclick="openInNewTab('winscp.net/eng/index.php');"><h3>WinSCP</h3></a>
-				<p>If you're like me and get tired of typing 'cd' + enter, 'ls' + enter, or 'cd ..' + enter a million times when navigating a server via SSH, then you should look into WinSCP (for Windows users). It is a SSH client that allows you to navigate the server just like an regular file navigation program (such as Windows Explorer or OSX Finder), allowing you to easily see where you are and where you can go. The only thing I need the command line for now is shell activities.</p>
-				<a onclick="openInNewTab('filezilla-project.org');"><h3>FileZilla</h3></a>
+				<a onclick="openInNewTab('sorting-algorithms.com/');">
+				  <h3>Sorting Algorithms</h3>
+				</a>
+				<p>
+				  A great site that gives pseudocode, performance analysis, and animations on 8 different sorting algorithms.
+				</p>
+				<a onclick="openInNewTab('winscp.net/eng/index.php');">
+				  <h3>WinSCP</h3>
+				</a>
+				<p>
+				  If you're like me and get tired of typing 'cd' + enter, 'ls' + enter, or 'cd ..' + enter a million times when navigating a server via SSH, then you should look into WinSCP (for Windows users). It is a SSH client that allows you to navigate the server just like an regular file navigation program (such as Windows Explorer or OSX Finder), allowing you to easily see where you are and where you can go. The only thing I need the command line for now is shell activities.
+				</p>
+				<a onclick="openInNewTab('filezilla-project.org');">
+				  <h3>FileZilla</h3>
+				</a>
 				<p>Same type of program as WinSCP, but for OSX users</p>
-				<a onclick="window.open('http://brew.sh', '_blank').focus();"><h3>Homebrew</h3></a>
+				<a onclick="window.open('http://brew.sh', '_blank').focus();">
+				  <h3>Homebrew</h3>
+				</a>
 				<p>Easy way to install programs from the command line for OSX users. If you have ever used Linux, it is comparable to 'apt-get'.</p>
-				<a onclick="openInNewTab('djangoproject.com/');"><h3>Django</h3></a>
+				<a onclick="openInNewTab('djangoproject.com/');">
+				  <h3>Django</h3>
+				</a>
 				<p>A great well-structured web-framework that works in the Python programming language. Encourages good use of the Model-View-Controller architecture.</p>
-				<a onclick="openInNewTab('code.google.com/p/google-styleguide/');"><h3>Google Style Guide</h3></a>
+				<a onclick="openInNewTab('code.google.com/p/google-styleguide/');">
+				  <h3>Google Style Guide</h3>
+				</a>
 				<p>Style guides put together by engineers at Google to help you write maintainable and clean-looking code. I try to adhere to all of these guides. They have guides available for C++, Objective-C, JavaScript, AngularJS, HTML/CSS, Python, and more.</p>
-				<a onclick="openInNewTab('regexr.com/');"><h3>RegExr</h3></a>
+				<a onclick="openInNewTab('regexr.com/');">
+				  <h3>RegExr</h3>
+				</a>
 				<p>A cool site that really helps if you're learning Regular Expressions. It allows you to type in RegEx and see what type of text it would select in real time.</p>
-				<a onclick="openInNewTab('phptherightway.com/');"><h3>PHP The Right Way</h3></a>
-				<p>Far too often, PHP is thrown in the middle of a website to help with back-end requirements as needed, resulting in grossly sloppy sites. As if terribly structured sites aren't bad enough, the PHP code is almost always under-par of the standard quality of code that PHP should be held at. This site comes in to help you learn how to program in PHP, 'the right way'.</p>
-				<a onclick="openInNewTab('cakephp.org/');"><h3>CakePHP</h3></a>
+				<a onclick="openInNewTab('phptherightway.com/');">
+				  <h3>PHP The Right Way</h3>
+				</a>
+				<p>
+				  Far too often, PHP is thrown in the middle of a website to help with back-end requirements as needed, resulting in grossly sloppy sites. As if terribly structured sites aren't bad enough, the PHP code is almost always under-par of the standard quality of code that PHP should be held at. This site comes in to help you learn how to program in PHP, 'the right way'.
+				</p>
+				<a onclick="openInNewTab('cakephp.org/');">
+				  <h3>CakePHP</h3>
+				</a>
 				<p>My preferred framework for PHP development.</p>
 			  </div>
 			</div>
 
 			<div class="tab-pane" id="past">
-			  
 			  <div class="center-block pull-left">
-
 			    <br/><br/>
-			    <div class="center-block" style="width:200px">
+			    <div class="center-block">
 				  <p class="text-center projectTitle">
 				    <b><a href="" onclick="window.openHere('github.com/derekargueta/Jeopardy', '_blank').focus();">Jeopardy</a></b>
 				  </p>
@@ -224,7 +328,7 @@
 
 			    <br/><br/>
 
-			    <div class="center-block" style="width:200px">
+			    <div class="center-block">
 				  <p class="text-center projectTitle">
 				    <b><a href="" onclick="window.openHere('github.com/derekargueta/DiscoWindows', '_blank').focus();">DiscoWindows</a></b>
 				  </p>
@@ -295,6 +399,8 @@
 			</div>
 		  </div>
 		</div>
+
+		<!-- Project Euler Tab -->
 		<div class="tab-pane" id="projectEuler">
 		  <div class="center-block">
 			<p class="font16">Project Euler is probably (in my opinion) the best tool to create logical, witty, and efficient programmers. It is a large collection of math-based questions and puzzles for which you must write a short program to solve. I love these kind of problems because it doesn't test your knowledge of a certain technology, but your problem-solving skills which I believe to be far more valuable. If you can solve these problems in a programming language, chances are you will have no problem picking up other languages as needed. My high school computer science teacher told me that once you know one language, you know them all. And he's correct, but he's not referring to syntax. He is talking about the logic and programming concepts such as boolean operations, loops, if-statements, etc. Knowing how to implement these basic tools to create complex logic is a powerful tool. Hopefully after this semester ends I'll have much more time to get back on this.<br/></p>
@@ -359,13 +465,21 @@
 		<div class="tab-pane" id="skills">
 		  <div class="center-block" id="skillsDiv">
 			<h3>Languages</h3>
-			<p class="font16">Java, C/C++, Lua, Python, HTML5, CSS3, JavaScript, PHP, Objective-C, SQL</p>
+			<p class="font16">Java, C/C++, Lua, Python, HTML5, CSS3, JavaScript, PHP, Objective-C, SQL, Shell Script</p>
 			<h3>Development</h3>
 			<p class="font16">Primary interests are in Web, Mobile, and Embedded Systems with limited experience in Desktop.</p>
 			<h3>Libraries and Frameworks</h3>
 			<p class="font16">Twitter Bootstrap, Google APIs, RestKit, Django, Django Rest Framework, Android SDK, Cocoa Foundation, CakePHP, Express Framework, Jade Templating Language</p>
 			<h3>Operating Systems</h3>
-			<p class="font16">Windows, Linux, OSX</p>
+			<p class="font16">Windows, Linux (Ubuntu & Mint), OSX, iOS, Android</p>
+			<br/><br/>
+			<h3>My Stacks (on stacks)</h3>
+			<h4>Mobile</h4>
+			<p>I prefer building apps natively. Cocoa Foundation on iOS and Android SDK on Android. Native > Cross-Platform</p>
+			<h4>Desktop</h4>
+			<p>My preferred desktop language is Java, as I have more experience in it including experience with the Java Swing Framework for GUIs. However I would be fine working in C++ as well.</p>
+			<h4>Web</h4>
+			<p>My dev stack consists of Node.js + Express or Python with either the Django or Flask frameworks on the backend, with usage of jQuery, Bootstrap, and AngularJS on the frontend.</p>
 		  </div>
 		</div>
 
@@ -374,16 +488,30 @@
 		  <h2 class="text-center">
 		    <a href="http://www.github.com/derekargueta" target="_blank">Feel free to explore my Github</a>
 		  </h2>
-		  <p class="font26">It's currently a little outdated, but it has some of my work on there including my final project from high school which is Jeopardy done in Java, as well as my DiscoWindows project and a few labs from my computer science courses</p>
+		  <p class="font26 center-block" style="width:800px">It is quite up-to-date. I usually make commits at least every 3 or 4 days. It contains all of my personal projects and most of my classwork.</p>
+		  <ul id="github_feed" class="center-block">
+
+		    <% for(var x = 0; x < 15; x++) { %>
+		    	<li id='git<%=x%>'>
+		    	
+		    	</li>
+		    	<script>
+		    	  var decoded = $("#git<%=x%>").html('<%= feed[x] %>').text();
+		    	  $("#git<%=x%>").html(decoded);
+		    	  console.log(decoded);
+		    	</script>
+		    <% } %>
+
+		  </ul>
 		</div>
 
 		<!-- Work Pane -->
 		<div class="tab-pane" id="work">
 		  <style>
-			td{
-			  padding-bottom:40px;
-			  padding-left:8px;
-			  padding-right:8px;
+			td {
+			  padding-bottom: 40px;
+			  padding-left: 8px;
+			  padding-right: 8px;
 			}
 		  </style>
 		  <div class="work">
@@ -539,13 +667,18 @@
 				Perform general maintanence of plants and property as well as any special assigned tasks. Handled and catered to customers. Also assigned the construction and maintence of the company's website (recent assignment)
 			  </td>
 			</tr>
-
 		  </table>
 		</div>
 	  </div>
 	</div>
+	<div style="width:400px;height:50px;margin-top:50px;margin-bottom:50px" class="center-block">
+      <p style="text-align:center">Running on Node.js with Express</p>
+    </div>	
   </div>
-	<script type="text/javascript">
+  
+  <script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+
 	  function openInNewTab(url){
 	    window.open('http://www.' + String(url), '_blank').focus();
 	  }

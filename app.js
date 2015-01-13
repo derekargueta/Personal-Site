@@ -11,12 +11,12 @@ var users = require('./routes/users');
 var app = express();
 
 // view engine setup
+app.use("/components", express.static(__dirname + '/bower_components'));
 app.use("/css", express.static(__dirname + '/public/stylesheets'));
 app.use("/bootstrap", express.static(__dirname + '/public/stylesheets/bootstrap'));
 app.use("/js", express.static(__dirname + '/public/javascripts'));
 app.use("/font-awesome", express.static(__dirname + 'public/font-awesome'));
 app.set('views', path.join(__dirname, 'views'));
-//app.set('view engine', 'jade');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
@@ -60,7 +60,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
-app.listen(24017);
 
 module.exports = app;
