@@ -18,14 +18,7 @@
     "fontawesome": "~4.1.0",
     "bootstrap": "~3.2.0",
     "octicons": "*",
-    "polymer": "Polymer/polymer#~0.5.2",
-    "core-header-panel": "Polymer/core-header-panel#~0.5.2",
-    "core-toolbar": "Polymer/core-toolbar#~0.5.2",
-    "paper-tabs": "Polymer/paper-tabs#~0.5.2",
-    "core-scaffold": "Polymer/core-scaffold#~0.5.2",
-    "core-item": "Polymer/core-item#~0.5.2",
-    "core-animated-pages": "Polymer/core-animated-pages#~0.5.2",
-    "paper-item": "Polymer/paper-item#~0.5.2",
-    "core-menu": "Polymer/core-menu#~0.5.2"
+    "skel": "~2.2.0",
+    "jquery": "~2.1.3"
   }
 }

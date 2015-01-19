@@ -8,7 +8,10 @@ app.use("/components", express.static(__dirname + '/bower_components'));
 app.use("/css", express.static(__dirname + '/public/stylesheets'));
 app.use("/bootstrap", express.static(__dirname + '/public/stylesheets/bootstrap'));
 app.use("/js", express.static(__dirname + '/public/javascripts'));
+app.use("/img", express.static(__dirname + '/public/images'));
 app.use("/font-awesome", express.static(__dirname + 'public/font-awesome'));
+app.use('/pages', express.static(__dirname + '/views/pages'));
+
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');

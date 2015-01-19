@@ -1,79 +1,69 @@
 <!DOCTYPE html5>
-<html>
+<html ng-app="myApp">
   <head>
     <title>Derek Argueta</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Jolly+Lodger|Roboto:100,300,100italic,300italic|Amatic+SC|Inconsolata'
+    rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="row">
+        <div class="12u$">
+          <h1 id="title">Derek Argueta</h1>
+        </div>
+        <div class="12u$">
+          <h2 style="text-align:center" id="subtitle">
+            <span id="programmer">Programmer</span>
+            <span id="hacker">Hacker</span>
+            <span id="geek">Geek</span>
+          </h2>
+        </div>
+      </div>
 
-    <!-- Polymer black magic -->
-    <script src="components/webcomponentsjs/webcomponents.min.js"></script>
-    <!--<script src="components/polymer/polymer.min.js"></script>-->
+      <!-- Navigation -->
+      <div class="row" id="nav" style="margin-top:80px">
+        <div class="-1u 2u">
+          <p><a href="#" id="home">Home</a></p>
+        </div>
+        <div class="2u">
+          <p><a href="#work" id="work">Work</a></p>
+        </div>
+        <div class="2u">
+          <p><a href="#projects" id="projects">Projects</a>
+        </div>
+        <div class="2u">
+          <p><a href="#blog" id="blog">Blog</a></p>
+        </div>
+        <div class="2u$">
+          <p><a href="#contact" id="contact">Contact</a></p>
+        </div>
 
-    <link rel="import" href="components/core-toolbar/core-toolbar.html"/>
-    <link rel="import" href="components/core-scaffold/core-scaffold.html"/>
-    <link rel="import" href="components/core-menu/core-menu.html"/>
-    <link rel="import" href="components/paper-item/paper-item.html"/>
-    <link rel="import" href="components/core-item/core-item.html"/>
-    <link rel="import" href="components/core-icon/core-icon.html"/>
-    <link rel="import" href="components/core-icon-button/core-icon-button.html"/>
-    <link rel="import" href="components/core-animated-pages/core-animated-pages.html">
-    <link rel="import" href="components/core-animated-pages/transitions/slide-from-right.html">
+        <div class="-1u 2u" style="height:5px;background-color:#33CCFF" id="nav-indicator"></div>
+
+        <div class="12u$" style="height:1px;background-color:black"></div>
+      </div>
+      
+      <div id="main">
+
+        <div ng-view></div>
+
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:150px">
+      <div class="12u$">
+        <p style="text-align:center;line-height:26px">Built on AngularJS + Express + Node.js<br/>&copy; 2015 Derek Argueta</p>
+      </div>
+    </div>
 
     <!-- JavaScript -->
-    <script>
-      var template = document.querySelector('#t');
-      template.pages = [
-        {name: 'Single', hash: 'one'},
-        {name: 'page', hash: 'two'},
-        {name: 'app', hash: 'three'},
-        {name: 'using', hash: 'four'},
-        {name: 'Polymer', hash: 'five'}
-      ];
-
-      template.menuItemSelected = function(e, detail, sender) {
-        if (detail.isSelected) {
-          this.$ && this.$.scaffold.closeDrawer();
-        }
-      }
-    </script>
-  </head>
-
-  <body fullbleed unresolved>
-    <template is="auto-binding" id="t">
-      <core-scaffold id="scaffold">
-
-        <nav>
-          <core-toolbar>
-            <span>Single Page Polymer</span>
-          </core-toolbar>
-          <core-menu valueattr="hash" selected="{{route}}" on-core-select="{{menuItemSelected}}">
-            <template repeat="{{page, i in pages}}">
-              <paper-item hash="{{page.hash}}" noink>
-                <core-icon icon="label{{route != page.hash ? '-outline' : ''}}"></core-icon>
-                <a href="#{{page.hash}}">{{page.name}}</a>
-              </paper-item>
-            </template>
-          </core-menu>
-        </nav>
-
-        <core-toolbar tool flex>
-          <div flex>Application</div>
-          <core-icon-button icon="refresh"></core-icon-button>
-          <core-icon-button icon="add"></core-icon-button>
-        </core-toolbar>
-
-        <div layout horizontal center-center fit>
-          <core-animated-pages valueattr="hash" selected="{{route}}" transitions="slide-from-right">
-            <template repeat="{{page, i in pages}}">
-              <section hash="{{page.hash}}" layout vertical center-center>
-                <div>{{page.name}}</div>
-              </section>
-            </template>
-          </core-animated-pages>
-        </div>
-      </core-scaffold>
-    </template>
-
+    <script src="components/jquery/dist/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="components/skel/dist/skel.min.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
