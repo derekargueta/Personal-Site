@@ -1,372 +1,48 @@
-a {
-  cursor: pointer;
-}
-
-#name  {
-  color: #504A4B;
-}
-
-.nav-pills {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.nav {
-  font-size: 1.7em;
-}
-
 body {
-  padding-top: 25px;
-  padding-left: 30px;
-  padding-right: 15px;
-  background-color: #1C1C1C;
+  /*font-family: "RobotoDraft";*/
+  font-weight: 300;
 }
 
-body > p {
-  font-size: 90px;
-  line-height: 100%;
+core-animated-pages {
+  width: 85%;
+  height: 85%;
+  -webkit-user-select: none;
+  overflow: hidden;
 }
 
-.titleStyle1,
-.titleStyle2 {
-  font-size: 90px;
-  line-height: 100%;
-}
-
-.titleStyle1 {
-  color: #428bca;
-}
-
-.titleStyle2 {
-  color: #FFFFFF;
-}
-
-.font26 {
-  font-size: 26px;
-}
-
-.font23 {
-  font-size: 23px;
-}
-
-.font20 {
-  font-size: 20px;
-}
-
-.font16 {
-  font-size: 16px;
-}
-
-.greyBar,
-.fullWidth {
-  width: 100%;
-}
-
-.projectIcon {
-  width: 128px;
-  height: 128px;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  margin-bottom: 25px;
-}
-
-#groupSmartIcon {
-  background-image: url(../images/groupsmart.png);
-}
-
-#appleIcon {
-  background-image: url(../images/Apple_logo.png);
-}
-
-#androidIcon {
-  background-image: url(../images/Android_logo.png);
-}
-
-#javaIcon {
-  background-image: url(../images/java.png);
-}
-
-#pythonIcon {
-  background-image: url(../images/python.png);
-}
-
-#luaIcon {
-  background-image: url(../images/lua.png);
-}
-
-#htmlIcon {
-  background-image: url(../images/html.png);
-}
-
-#rpiIcon {
-  background-image: url(../images/rpi.png);
-}
-
-.mediaIcon {
-  margin: 20px;
-  display: inline-block;
-}
-
-.mediaIcon > img {
-  width: 128px;
-  height: 128px;
-}
-
-#mainNav {
-  width: 1000px;
-  margin-top: 15px;
-}
-
-#innerProjects > div {
-  width: 600px;
-  margin-left: 75px;
-}
-
-#projectEuler > div {
-  width: 800px;
-  height: 400px;
-}
-
-#contact > div {
-  width: 950px;
-}
-
-#contact > div > div {
-  width: 690px;
-}
-
-#work > div {
-  width: 1000px;
-  height: 975px;
-  background-color: #E6E6E6;
-  margin-bottom: 50px;
-}
-
-#past > div {
-  width: 600px;
-  margin-left: 75px;
-}
-
-#past > div > .center-block {
-  width: 200px;
-}
-
-#currentOngoing > div {
-  width: 600px;
-  margin-left: 75px;
-}
-
-.tallLines {
-  line-height: 125%;
-}
-
-#funLinksContent {
-  width: 600px;
-  margin-left: 75px;
-}
-
-#subtitle {
-  height: 50px;
-}
-
-#mainContent {
-  width: 1000px;
-  height: 800px;
-  background-color: #E6E6E6;
-  padding-top: 15px;
-  margin-bottom: 50px;
-}
-
-#iconColumn {
-  margin-top: 50px;
-  width: 300px;
-  margin-right: 25px;
-}
-
-#projectNav {
-  width: 300px;
-  margin-right: 25px;
-  margin-top: 15px;
-  list-style-type: none;
-}
-
-/** Styling for the tab-panes **/
-#projects {
-  width: 1000px;
-  height: 1775px;
-  background-color: #E6E6E6;
-  margin-bottom: 50px;
-}
-
-#projects > .pull-right {
-  width: 300px;
-}
-
-#skills {
-  width: 1000px;
-  height: 745px;
-  background-color: #E6E6E6;
-  margin-bottom: 50px;
-  text-align: left;
-}
-
-#skillsDiv > h4 {
-  text-align: left;
-}
-
-#home {
-  height: 750px;
-}
-
-#home,
-#skillsDiv,
-#github {
-  width: 800px;
-}
-
-#currentOngoing {
-  height: 1000px;
-}
-
-#workTable {
-  width: 850px;
-}
-
-#center {
-  float: left;
-  width: 80%;
-}
-
-.greyBar {
-  height: 2px;
-  margin: 0px;
-}
-
-.projectTitle {
-  margin: 0px;
-  font-size: 27px;
-}
-
-h4 {
-  text-align: center;
-  color: #504A4B;
-}
-
-p {
-  color: #504A4B;
-}
-
-.ext_link {
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.ext_link:hover {
-  color: red;
-  text-decoration: underline;
-}
-
-#column {
-  width: 17%;
-  height: 515px;
+core-animated-pages > * {
+  border-radius: 5px;
+  font-size: 50px;
   background-color: white;
-  border-style: solid;
-  border-color: #504A4B;
-  border-width: 5px;
-  float: right;
 }
 
-#eulerImage {
-  height: 90px;
-  width: 300px;
+body /deep/ core-toolbar {
+  background-color: #03a9f4;
+  color: #fff;
 }
 
-th {
-	padding-bottom: 0px;
+core-menu {
+  color: #01579b;
+  margin: 10px 0 0 0 ;
 }
 
-#about {
-  height: 3650px;
-  background-color: #E6E6E6;
-  margin-bottom: 50px;
+core-menu > paper-item {
+  transition: all 300ms ease-in-out;
 }
 
-#about > img {
-  width: 200px;
-  height: 200px;
-  margin-right: 100px;
-  margin-top: 25px;
+paper-item a {
+  text-decoration: none;
+  color: currentcolor;
+  margin-left: 5px;
 }
 
-.aboutBlock {
-  width:550px;
+core-menu > paper-item.core-selected {
+  background: #e1f5fe;
 }
 
-#quotes {
-  width: 600px;
-  height: 600px;
-  margin-top: 30px;
-}
-
-#about1 {
-  margin-left: 100px;
-}
-
-#about2 {
-  width: 100%;
-  height: 400px;
-  margin-top: 50px;
-  clear: both;
-}
-
-#about2 > img {
-  width: 160px;
-  height: 350px;
-  margin-left: 100px;
-}
-
-#about2 > div {
-  margin-right: 100px;
-  margin-top: 50px;
-}
-
-#about3 {
-  width: 100%;
-  height: 200px;
-  clear: both;
-}
-
-#about4 {
-  width: 100%;
-  height: 500px;
-  clear: both;
-}
-
-#about4 > img {
-  margin-right: 100px;
-  width: 200px;
-  height: 275px;
-  margin-top: 50px;
-}
-
-#about4 > div {
-  margin-left: 100px;
-}
-
-#github {
-  width: 100%;
-  height: 1100px;
-  background-color: #E6E6E6;
-}
-
-#github_feed {
-  width: 800px;
-  margin-top: 50px;
-  list-style-type: none;
-  background-color: #1C1C1C;
-  border-radius: 15px;
-  padding: 20px;
-  border: 10px solid white;
+@media all and (max-width: 480px) {
+  core-animated-pages {
+    width: 100%;
+    height: 100%;
+  }
 }
