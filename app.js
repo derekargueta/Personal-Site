@@ -7,12 +7,19 @@ var app = express();
 app.use("/components", express.static(__dirname + '/bower_components'));
 app.use("/css", express.static(__dirname + '/public/stylesheets'));
 app.use("/bootstrap", express.static(__dirname + '/public/stylesheets/bootstrap'));
-app.use("/js", express.static(__dirname + '/public/javascripts'));
 app.use("/img", express.static(__dirname + '/public/images'));
-app.use("/font-awesome", express.static(__dirname + 'public/font-awesome'));
-app.use('/pages', express.static(__dirname + '/views/pages'));
 
-app.set('views', path.join(__dirname, 'views'));
+if(process.env.ENV == "dev") {
+    app.use('/pages', express.static(__dirname + '/views/pages'));
+    app.use("/js", express.static(__dirname + '/public/js'));
+    app.set('views', path.join(__dirname, 'views'));
+} else {
+    app.use('/pages', express.static(__dirname + '/views/dist/pages'));
+    app.use("/js", express.static(__dirname + '/public/js/dist'));
+    app.set('views', path.join(__dirname, 'views/dist'));
+}
+
+
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
