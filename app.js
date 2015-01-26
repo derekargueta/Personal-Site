@@ -6,7 +6,6 @@ var app = express();
 // view engine setup
 app.use("/components", express.static(__dirname + '/bower_components'));
 app.use("/css", express.static(__dirname + '/public/stylesheets'));
-app.use("/bootstrap", express.static(__dirname + '/public/stylesheets/bootstrap'));
 app.use("/img", express.static(__dirname + '/public/images'));
 
 if(process.env.ENV == "dev") {
