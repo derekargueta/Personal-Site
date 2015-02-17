@@ -31,6 +31,16 @@ i {
   font-style: italic;
 }
 
+u {
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+
+b {
+  text-decoration: none;
+  font-weight: 500;
+}
+
 #title {
   text-align: center;
   font-size: 60px;
