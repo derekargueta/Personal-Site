@@ -74,7 +74,7 @@ $(document).ready(function() {
 /////////////////////////////////////////
 //            AngularJS                //
 /////////////////////////////////////////
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', '720kb.tooltips']);
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider
 
