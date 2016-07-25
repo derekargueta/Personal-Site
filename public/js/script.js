@@ -55,13 +55,6 @@ $(document).ready(function() {
     }
   });
 
-  $("#bio").click(function() {
-    if(!$("#nav-indicator").hasClass("-8u")) {
-      clearNav();
-      $("#nav-indicator").addClass("-8u");
-    }
-  });
-
   $("#contact").click(function() {
     if(!$("#nav-indicator").hasClass("-10u")) {
       clearNav();
@@ -91,21 +84,12 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
     })
 
     .when('/blog', {
-      templateUrl : '/pages/blog.html',
-      controller  : 'blogController'
+      templateUrl : '/pages/blog.html'
     })
 
     .when('/contact', {
       templateUrl : '/pages/contact.html'
-    })
-
-    .when('/bio', {
-      templateUrl: '/pages/bio.html'
     });
 
     $locationProvider.html5Mode(true);
 }]);
-
-myApp.controller('blogController', function($scope) {
-
-});

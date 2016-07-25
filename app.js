@@ -1,7 +1,12 @@
-var express = require('express');
-var path = require('path');
-var routes = require('./routes/index');
-var app = express();
+const express = require('express');
+const path = require('path');
+const routes = require('./routes/index');
+const app = express();
+const gulp = require('gulp');
+
+// run tasks
+require('./gulpfile.js');
+gulp.start('minify');
 
 // view engine setup
 app.use("/components", express.static(__dirname + '/bower_components'));
