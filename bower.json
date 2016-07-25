@@ -15,7 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "skel": "~3.0.1",
     "jquery": "~2.1.3",
     "angular-tooltips": "~0.1.9",
     "font-awesome": "~4.3.0",
