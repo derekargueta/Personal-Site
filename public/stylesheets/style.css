@@ -106,6 +106,18 @@ strong {
   font-weight: bold;
 }
 
+.screenshot {
+  margin-top: 20px;
+}
+
+.project-title {
+  font-size: 30px;
+}
+
+.project-container {
+  margin-top: 40px;
+}
+
 .work-block {
   margin-bottom: 30px;
 }
