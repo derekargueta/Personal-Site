@@ -27,6 +27,10 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
 
     .when('/contact', {
       templateUrl : '/pages/contact.html'
+    })
+
+    .when('/reading', {
+      templateUrl: '/pages/reading.html'
     });
 
     $locationProvider.html5Mode(true);
