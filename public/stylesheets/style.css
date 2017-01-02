@@ -47,26 +47,6 @@ b {
   margin-bottom: 10px;
 }
 
-#subtitle {
-  font-size:30px;
-}
-
-#programmer {
-  font-family: 'Inconsolata';
-}
-
-#hacker {
-  font-family: 'Jolly Lodger', cursive;
-}
-
-#geek {
-  font-family: 'Amatic SC', cursive;
-}
-
-#nav {
-
-}
-
 #nav > div > h2 {
   text-align: center;
   font-size: 26px;
