@@ -4,9 +4,7 @@ const routes = require('./routes/index');
 const app = express();
 const gulp = require('gulp');
 
-// run tasks
 require('./gulpfile.js');
-gulp.start('build');
 
 // view engine setup
 app.use("/components", express.static(__dirname + '/bower_components'));

@@ -7,17 +7,17 @@
     "start:prod": "export ENV=prod && node ./bin/www"
   },
   "dependencies": {
-    "bower": "~1.8",
-    "debug": "~2.6",
-    "ejs": "~2.5.5",
-    "express": "~4.14.0",
-    "feedparser": "~0.18.1",
-    "gulp": "^3.9.1",
-    "request": "~2.79.0"
+    "bower": "1.8.8",
+    "debug": "4.1.1",
+    "ejs": "3.0.2",
+    "express": "4.17.1",
+    "feedparser": "2.2.9",
+    "gulp": "4.0.2",
+    "request": "2.88.2"
   },
   "devDependencies": {
-    "del": "^2.2.1",
-    "gulp-clean-css": "^2.0.12",
-    "gulp-htmlmin": "^2.0.0"
+    "del": "5.1.0",
+    "gulp-clean-css": "4.3.0",
+    "gulp-htmlmin": "5.0.1"
   }
 }

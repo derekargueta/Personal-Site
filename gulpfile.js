@@ -28,9 +28,9 @@ gulp.task('copy-images', () => {
 		.pipe(gulp.dest('dist/public/images'));
 });
 
-gulp.task('build',  ['clean'], () => {
+gulp.task('build',  gulp.series('clean', () => {
   gulp.run('minify-html');
   gulp.run('minify-css');
   gulp.run('copy-images');
-});
+}));
 
